@@ -1,11 +1,11 @@
 @font-face {
-  font-family: Inter;
+  font-family: vazir;
   src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Round-Dots/fonts/webfonts/Vazirmatn-RD[wght].woff2') format('woff2 supports variations'),
        url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Round-Dots/fonts/webfonts/Vazirmatn-RD[wght].woff2') format('woff2-variations');
 
 }
 *{
-   font-family: Inter;
+   font-family: vazir;
    font-style: normal;
    font-weight: 500;
    font-size: 16px;

@@ -44,7 +44,8 @@ export default function Landing({data}) {
               height: "63px",
               left: "330px",
               top: "408px",
-              color:"#FFFFFF"
+              color:"#FFFFFF",
+              fontFamily: 'Vazir',
             }}
           >سواحل پرتو پرتقال</Typography>
         </Box>
@@ -54,19 +55,16 @@ export default function Landing({data}) {
             width: "956px",
             height: "115px",
             left: "98px",
-            top: "599px",
-            fontFamily: "Roboto",
-            fontStyle: "normal",
-            fontWeight: "400",
-            lineHeight: "23px",
-            textAlign: "right",
-            color: "#505050",
+            top: "599px", 
           }}
         >
           <Typography
             variant="body2"
             component="p"
-            sx={{ color: "text.primary" }}
+            sx={{ color: "text.primary", fontFamily: "Roboto",
+            fontWeight: "400",
+            lineHeight: "23px",
+            textAlign: "right",}}
           >
             شهر آرکوزلو یک حومه مسکونی ممتاز پورتو است که از بسیاری جهات دارای
             زمین گلف 9 سوراخ معروف ، ویلاهای مجلل و عمارت است. خود میرامار به

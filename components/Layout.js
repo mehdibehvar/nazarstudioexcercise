@@ -21,7 +21,7 @@ export default function Layout({ children }) {
             fontSize:"32px"
         },
         body1:{
-            fontSize:"24px"
+            fontSize:"24px",
         },
         body2:{
             fontSize:"20px"
