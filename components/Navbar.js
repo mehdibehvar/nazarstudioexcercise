@@ -7,6 +7,7 @@ import Link from "next/link";
 import styled from '@emotion/styled';
 import { Store } from '../utils/store';
 import { useTheme } from "@mui/material";
+import { FilledButton, OutlinedButton} from './customButton';
 const DarkModeList=styled("ul")(() => ({
 marginLeft:"32px",
 display:"flex",
@@ -72,19 +73,12 @@ top: "20px",color:"text.primary",cursor:"pointer"}}>درباره ما</Typograph
    
     
 
-<Button variant="contained" sx={{
-background: "#187DF1",
+<FilledButton variant="contained" sx={{
 marginLeft:"20px",
-color:"#FFFFFF"
-}}><PersonIcon/>ثبت نام</Button>
-<Button variant="outlined" sx={{
-background:"#FFFFFF",
-border: "2px solid #187DF1",
-}}>ورود</Button>
+}}><PersonIcon/>ثبت نام</FilledButton>
+<OutlinedButton variant="outlined">ورود</OutlinedButton>
 </Box>
-
-
-    </Container>
+</Container>
 
   )
 }

@@ -4,8 +4,10 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import { get } from "../utils/httpclient";
+import Link from "next/link";
+import { FilledButton } from "../components/customButton";
 export default function Landing({data}) {
-  const {url,width,height,author,download_url}=data;
+  const {author,download_url}=data;
   return (
     <>
       <Head>
@@ -74,32 +76,30 @@ export default function Landing({data}) {
             بازدیدکنندگانش مکانی برای لذت بردن می دهد.
           </Typography>
         </Box>
-        <Button
+<Link href={"/aboutus"}>
+<FilledButton
           sx={{
             position: "absolute",
-            width: "172px",
-            height: "42px",
             left: "490px",
-            top: "778px",
-            background: "#187DF1",
-            borderRadius: "8px",
+            top: "778px",     
           }}
         >
           {" "}
-          <Typography
-            variant="button"
-            sx={{ color: "#FFFFFF", marginLeft: "5.33px" }}
+          <Box
+            sx={{  marginLeft: "5.33px" }}
           >
             درباره ما
-          </Typography>
-          <ArrowCircleLeftIcon sx={{ color: "#FFFFFF" }} />
-        </Button>
+          </Box>
+          <ArrowCircleLeftIcon/>
+</FilledButton>
+</Link>
       </Layout>
     </>
   );
 }
+
 export async function getStaticProps() {
-  const data=await get("https://picsum.photos/id/44/info")
+  const data=await get("https://picsum.photos/id/44/info");
   return {
     props: {
       data

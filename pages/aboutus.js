@@ -5,6 +5,8 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { get } from '../utils/httpclient'
+import Link from 'next/link'
+import { OutlinedButton } from '../components/customButton'
 export default function AboutUs() {
     const [imageUrl,setImageUrl] = useState("")
     useEffect(() => {
@@ -42,27 +44,26 @@ layout="responsive"
 <Typography variant='h2' sx={{textAlign:"center",marginBottom:"28px",color:"text.secondary"}}>درباره ما</Typography>
 <Typography variant='body1' sx={{textAlign:"justify",color:"text.primary"}}>نکته مهمی که در بیشتر سایتهای ایرانی توجهی به آن نمیشود طراحی صفحه درباره ما یا همان About Us است. اکثر افراد در این بخش مطالبی طولانی و خسته کننده برای کاربر و یا نوشته ای کوتاه و ناقص قرار میدهند که میتواند اعتبار سایت یا شرکت شما را زیر سوال ببرد.</Typography>
 </Box>
-<Button
+   <Link href={"/"}>
+   <OutlinedButton
           sx={{
             position: "absolute",
-            width: "172px",
-            height: "42px",
             left: "490px",
             top: "778px",
-            background: "#187DF1",
-            borderRadius: "8px",
           }}
         >
-            <ArrowCircleRightIcon sx={{ color: "#FFFFFF" }} />
+           <ArrowCircleRightIcon />
           {" "}
-          <Typography
-            variant="button"
-            sx={{ color: "#FFFFFF", marginRight: "5.33px" }}
+          <Box
+            sx={{ marginRight: "5.33px" }}
           >
-          صفحه نخست
-          </Typography>
-          
-        </Button>
+            <Typography variant='button' component="p">
+
+          صفحه اصلی
+            </Typography>
+          </Box>        
+   </OutlinedButton>
+   </Link>
     </Layout>
    </>
   )
