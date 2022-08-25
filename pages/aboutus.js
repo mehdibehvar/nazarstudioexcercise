@@ -29,7 +29,7 @@ export default function AboutUs() {
      height: "517px",
      left: "593px",
      top: "170px",
-     background: "#2B343B",
+     border: "0.2px solid #aeaeae",
      borderRadius: "98px",
      overflow:"hidden"}}>
 {imageUrl?<Image
