@@ -100,6 +100,11 @@ export default function Landing({data}) {
 
 export async function getStaticProps() {
   const data=await get("https://picsum.photos/id/44/info");
+  if(!data){
+    return{
+      notFound:true
+    }
+  }
   return {
     props: {
       data
